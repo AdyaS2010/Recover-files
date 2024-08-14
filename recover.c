@@ -51,4 +51,21 @@ int main(int argc, char *argv[])
                 return 1;
             }
         }
+
+        // If an output file is open, write to it
+        if (out_file != NULL)
+        {
+            fwrite(buffer, 512, 1, out_file);
+        }
+    }
+
+    // Close any remaining files
+    if (out_file != NULL)
+    {
+        fclose(out_file);
+    }
+
+    fclose(file);
+
+    return 0;
 }
