@@ -25,4 +25,30 @@ int main(int argc, char *argv[])
     // Initialize JPEG counter and output file pointer
     int jpg_count = 0;
     FILE *out_file = NULL;
+
+    // Read data from the forensic image
+    while (fread(buffer, 512, 1, file))
+    {
+        // Check if a new JPEG is starting
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff &&
+            (buffer[3] & 0xf0) == 0xe0)
+        {
+            // If an output file is already open, close it
+            if (out_file != NULL)
+            {
+                fclose(out_file);
+            }
+
+            // Create a new filename
+            char filename[8];
+            sprintf(filename, "%03i.jpg", jpg_count++);
+
+            // Open the output file
+            out_file = fopen(filename, "w");
+            if (out_file == NULL)
+            {
+                printf("Could not create %s.\n", filename);
+                return 1;
+            }
+        }
 }
