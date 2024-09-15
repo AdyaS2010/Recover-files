@@ -39,6 +39,9 @@ $ ./recover card.raw
 
 ![image](https://github.com/user-attachments/assets/4e5b81a6-77ac-4bd8-9a96-fb59d0fb0107)
 
+![image](https://github.com/user-attachments/assets/2cb89762-641b-43a2-803f-a0ce52aad31d)
+*Whoah, chicken!*
+
 ![image](https://github.com/user-attachments/assets/815a235b-58d6-4e30-a711-c104273710ae)
 
 *Recovers lost files!*
