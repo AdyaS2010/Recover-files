@@ -34,6 +34,15 @@ This project is a JPEG recovery tool written in C. It reads a forensic image, id
 $ ./recover card.raw
 ```
 
+![image](https://github.com/user-attachments/assets/7446825f-ca73-4bb2-9754-d6da353d2f57)
+*Command
+
+![image](https://github.com/user-attachments/assets/4e5b81a6-77ac-4bd8-9a96-fb59d0fb0107)
+
+![image](https://github.com/user-attachments/assets/815a235b-58d6-4e30-a711-c104273710ae)
+
+*Recovers lost files!*
+
 ## Contributing
 1. Fork the repository.
 2. Create a new branch:
